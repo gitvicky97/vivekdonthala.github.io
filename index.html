@@ -132,6 +132,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .arch .arr{text-align:center;color:var(--muted);font-size:20px;line-height:1;padding:9px 0}
 .arch .badge{display:inline-block;background:var(--teal);color:#fff;font-size:12px;font-weight:700;border-radius:999px;padding:2px 10px;margin-left:8px;vertical-align:middle}
 .arch-cap{color:var(--muted);font-size:14px;text-align:center;margin:10px 0 0}
+.pipe[style*="column"] .stage{flex:none}
 footer{background:var(--navy);color:#cfdbe8;text-align:center;padding:48px 24px}
 footer h2{color:#fff;font-size:26px;margin:0 0 8px}
 footer a{color:#7ee0d6}
@@ -160,6 +161,7 @@ footer a{color:#7ee0d6}
       <li><a href="#artifact-1" data-v="artifact-1">Artifact 1</a></li>
       <li><a href="#artifact-2" data-v="artifact-2">Artifact 2</a></li>
       <li><a href="#artifact-3" data-v="artifact-3">Artifact 3</a></li>
+      <li><a href="#artifact-4" data-v="artifact-4">Artifact 4</a></li>
     </ul>
   </div>
 </nav>
@@ -236,6 +238,23 @@ footer a{color:#7ee0d6}
           <p><span class="label">Process:</span> I compared several analogies, chose cooking scrambled eggs, and mapped each part of a neural network to a step anyone can picture.</p>
           <p><span class="label">Tools:</span> Analogy design, research from peer-reviewed sources, Claude for comparing analogies and a diagram.</p>
           <p><span class="label">Value Proposition:</span> Shows I can explain complex AI in plain language, which builds the trust people need to adopt new tools.</p>
+        </div>
+      </div>
+      <div class="artifact rev">
+        <div class="facts">
+          <a class="btn" href="#artifact-4" style="margin:0 0 18px">Artifact 4</a>
+          <h3>Data Challenges in Machine Learning: Three Scenarios</h3>
+          <p><span class="label">Objective:</span> Reason through three realistic data problems that machine learning teams face, from cleaning messy data to sharing sensitive records safely.</p>
+          <p><span class="label">Process:</span> I worked through each scenario with an AI coach that challenged my first answers, then turned my reasoning into a reusable data readiness checklist.</p>
+          <p><span class="label">Tools:</span> Claude running the course’s Data Challenge Scenarios Coach, plus my BI experience with data quality.</p>
+          <p><span class="label">Value Proposition:</span> Shows I turn data concerns into measurable checks before a model is trusted.</p>
+        </div>
+        <div class="framed" style="padding:28px">
+          <div class="pipe" style="flex-direction:column">
+            <div class="stage"><b>1. Clean the data</b><span>Without erasing the users the model serves</span></div>
+            <div class="stage" style="border-top-color:#d08a2e"><b>2. Check before scaling</b><span>Historical data can carry old biases</span></div>
+            <div class="stage" style="border-top-color:#2e5a88"><b>3. Share data safely</b><span>Privacy, security, and governance together</span></div>
+          </div>
         </div>
       </div>
       </div>
@@ -652,6 +671,160 @@ footer a{color:#7ee0d6}
   </section>
 </main>
 
+<!-- ARTIFACT 4 -->
+<main id="artifact-4" class="view">
+  <header class="banner">
+    <div class="content">
+      <p class="kicker">Artifact 4</p>
+      <h1>Data Challenges in Machine Learning</h1>
+      <p class="sub">Three realistic scenarios, and the checks I would require before trusting a model</p>
+    </div>
+  </header>
+
+  <section class="sec">
+    <div class="in two" style="align-items:start">
+      <div>
+        <h2>Summary</h2>
+        <p>Most machine learning failures start with the data, not the algorithm. In this exercise, an AI coach gave me three realistic scenarios and kept pushing past my first answers: cleaning 800,000 messy customer reviews, scaling a résumé-screening model to a new country, and helping two hospitals build a model together without sharing raw patient records.</p>
+        <p>For the portfolio, I turned my reasoning into a short guide and a data readiness checklist that any team can use before training or deploying a model.</p>
+      </div>
+      <div>
+        <h2>Objective</h2>
+        <p class="lead">Identify the data risks in each scenario, propose a realistic approach, and explain how I would prove the approach worked.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt">
+    <div class="in">
+      <h2 class="center">Where the risks appear</h2>
+      <div class="arch" role="img" aria-label="Where data challenges appear in the machine learning lifecycle, and the check for each"><div class="node"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18l-7 8v6l-4 2v-8z"/></svg><div class="t">1. Clean the data</div><div class="s">Risk: duplicates, spam, unreliable labels · Check: compare how many records each language and user group keeps after cleaning</div></div><div class="arr" aria-hidden="true">↓</div><div class="node"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2 21a7 7 0 0 1 14 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7"/><path d="M22 21a7 7 0 0 0-4.5-6.5"/></svg><div class="t">2. Check before scaling</div><div class="s">Risk: biased history, a new population · Check: error rates by group, a local pilot, human review</div></div><div class="arr" aria-hidden="true">↓</div><div class="node"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><div class="t">3. Share data safely</div><div class="s">Risk: privacy leaks, poisoned updates · Check: secure aggregation, testing at each site, version history and rollback</div></div><div class="arr" aria-hidden="true">↓</div><div class="node core"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg><div class="t">Monitor continuously</div><div class="s">Every safeguard needs a measurable check, not a one-time fix</div></div></div><p class="arch-cap">The three scenarios follow a model from its training data to deployment and data sharing.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="in">
+      <h2>The three scenarios</h2>
+      <div class="cs">
+        <div class="card">
+          <h3>1. Data quality and cleaning</h3>
+          <p><b>The situation:</b> A team wants to quickly train a sentiment model on 800,000 public reviews full of duplicates, spam, missing fields, multiple languages, emoji-only reviews, and labels taken from star ratings.</p>
+          <p><b>My approach:</b> Profile the data first, then normalize, remove duplicates, check whether star ratings are reliable labels, and build training and test sets that don’t share related records. Normalizing first makes duplicates easier to catch, and removing them prevents the test from looking easier than it is.</p>
+          <p><b>Key insight:</b> Clean data is not automatically representative data. Dropping emoji-only or non-English reviews can quietly erase the users the model is meant to serve, so I would compare how much of each group survives cleaning.</p>
+        </div>
+        <div class="card">
+          <h3>2. Bias, distribution shift, and responsible scaling</h3>
+          <p><b>The situation:</b> A résumé-screening model trained on ten years of one company’s hiring decisions performs well on its own history. The company wants to use it in a new country at ten times the volume.</p>
+          <p><b>My approach:</b> Historical decisions may reflect preferences or biases rather than what actually makes someone qualified. Before scaling, I would require local testing, error rates checked for each group, a limited pilot, and human oversight.</p>
+          <p><b>Key insight:</b> Strong results on historical data prove little in a new setting, and overall accuracy can hide unequal errors. Rejecting a qualified candidate is the costlier mistake, because that person may never get another opportunity.</p>
+        </div>
+        <div class="card">
+          <h3>3. Data sharing, privacy, and governance</h3>
+          <p><b>The situation:</b> Two hospitals want to build a better diagnostic model together, but their records are sensitive, their coding practices differ, and neither wants to hand over raw data.</p>
+          <p><b>My approach:</b> Federated learning, so raw records stay at each hospital, combined with aligning their medical codes, secure aggregation, and testing the model separately at each site.</p>
+          <p><b>Key insight:</b> Federated learning protects where data lives, not the model itself. Model updates can still leak information, and with only two hospitals, a “majority vote” check can’t catch a bad update, so version history and rollback are essential.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt">
+    <div class="in">
+      <h2>Data readiness checklist</h2>
+      <p class="lead" style="max-width:760px">A resource I built from this exercise. Use it before training or deploying a model.</p>
+      <div class="list2" style="margin-top:20px">
+        <div class="card">
+          <h3>Before training</h3>
+          <ul>
+            <li>Keep an untouched copy of the raw data and document every change.</li>
+            <li>Check whether the labels actually measure what you care about.</li>
+            <li>Remove duplicates before splitting training and test data.</li>
+            <li>Compare which user groups remain after cleaning.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Before deploying or scaling</h3>
+          <ul>
+            <li>Test on data from the new population, not just past data.</li>
+            <li>Check error rates for each group, not only overall accuracy.</li>
+            <li>Start with a limited pilot and keep humans in the loop.</li>
+            <li>Give people a way to question or appeal a decision.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Before sharing data</h3>
+          <ul>
+            <li>Confirm the datasets are compatible before combining them.</li>
+            <li>Layer privacy, security, and governance safeguards.</li>
+            <li>Validate the model separately at each site.</li>
+            <li>Keep version history so a bad update can be rolled back.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>After launch</h3>
+          <ul>
+            <li>Monitor for drift and new gaps between groups.</li>
+            <li>Decide in advance who can pause or roll back the model.</li>
+            <li>Set rules for how long data and models are kept.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="in two" style="align-items:start">
+      <div>
+        <h2>Process</h2>
+        <ol class="steps">
+          <li><b>Run the coach.</b> I used the course’s Data Challenge Scenarios Coach prompt in Claude.</li>
+          <li><b>Reason through each scenario.</b> I proposed an approach, explained why, and answered follow-up questions about tradeoffs and edge cases.</li>
+          <li><b>Review the feedback.</b> The coach’s summary showed where my reasoning was strong and where it needed work.</li>
+          <li><b>Build a resource.</b> I turned the lessons into the guide and checklist on this page.</li>
+        </ol>
+      </div>
+      <div>
+        <h2>Tools and technologies used</h2>
+        <ul class="chips">
+          <li>Claude (AI coach)</li>
+          <li>Data profiling</li>
+          <li>Federated learning</li>
+          <li>Secure aggregation</li>
+          <li>Group-level evaluation</li>
+        </ul>
+        <h3 style="margin-top:28px">From the coach’s summary</h3>
+        <div class="card"><p style="margin:0;color:var(--muted)">“He consistently turned concerns into measurable checks and identified edge cases on his own.”</p><p style="margin:10px 0 0;font-size:14px;color:var(--muted)">AI-generated practice summary, not an instructor grade.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt">
+    <div class="in">
+      <h2>Challenges and solutions</h2>
+      <div class="cs">
+        <div class="card"><h3>Cleaning too aggressively</h3><p><span class="tagc">Challenge:</span> My first cleaning plan treated unusual reviews as noise, which could have removed whole groups of users.</p><p><span class="tags">Solution:</span> I added a check that compares how many records each language and user group keeps after cleaning.</p></div>
+        <div class="card"><h3>Catching a bad update with only two partners</h3><p><span class="tagc">Challenge:</span> With just two hospitals, there is no majority to outvote a poisoned model update.</p><p><span class="tags">Solution:</span> I proposed version history and rollback, so a bad update can be traced and undone.</p></div>
+        <div class="card"><h3>The governance gap</h3><p><span class="tagc">Challenge:</span> The coach noted I was weaker on governance: appeal paths, reviewer capacity, and data retention.</p><p><span class="tags">Solution:</span> I added those items to the checklist and plan to study model cards, which document a model’s intended use and limits.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="in two" style="align-items:start">
+      <div>
+        <h2>Value proposition</h2>
+        <p>In BI, I work with data quality problems every day. This exercise showed me how those same problems grow into fairness, privacy, and safety risks once a model is involved. I bring the habit of turning each concern into a measurable check, so a team knows a model is ready because of evidence, not because it looks accurate.</p>
+      </div>
+      <div class="refs">
+        <h2>References</h2>
+        <p>Anthropic. (2026). Claude [Large language model]. https://claude.ai</p>
+        <p>Mitchell, M., Wu, S., Zaldivar, A., Barnes, P., Vasserman, L., Hutchinson, B., Spitzer, E., Raji, I. D., &amp; Gebru, T. (2019). Model cards for model reporting. <i>Proceedings of the Conference on Fairness, Accountability, and Transparency</i>, 220–229. https://doi.org/10.1145/3287560.3287596</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+
 
 <footer>
   <h2>Get in touch</h2>
@@ -660,7 +833,7 @@ footer a{color:#7ee0d6}
 
 <script>
 (function(){
-  var views=['home','about','artifact-1','artifact-2','artifact-3'];
+  var views=['home','about','artifact-1','artifact-2','artifact-3','artifact-4'];
   function show(){
     var v=(location.hash||'#home').slice(1);
     if(views.indexOf(v)<0)v='home';
